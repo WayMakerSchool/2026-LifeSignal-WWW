@@ -1,5 +1,7 @@
 # 🚀 LifeSignal
 
+**[🌐 LifeSignal 웹 열기](https://waymakerschool.github.io/2026-LifeSignal-WWW/LifeSignal.html)**
+
 > 레이더 센서와 AI로 화재 현장의 구조 대상을 감지하고, 위치, 상태, 그리고 구조우선순위를 실시간 관제 화면에 전달하는 인명 구조 지원 시스템입니다.
 
 <!-- 대표 이미지나 시연 GIF가 있다면 여기에 넣어주세요. -->
