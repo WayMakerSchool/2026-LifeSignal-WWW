@@ -1,0 +1,40 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Raw sensor data, collection records, and backups
+AI/data/*.csv
+AI/data/backups/
+AI/data/collection_manifest.json
+
+# Trained model artifacts; include the final runtime SVM model
+AI/artifacts/*
+*.joblib
+*.keras
+*.h5
+!AI/artifacts/vpr100-svm.joblib
+
+# Intermediate documents, previews, and distribution archives
+.codex-build/
+tmp/
+output/
+*.zip
+
+# Xcode/build output
+DerivedData/
+build/
+**/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
