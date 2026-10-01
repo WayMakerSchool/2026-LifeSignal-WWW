@@ -37,10 +37,10 @@
 
 ## 👥 팀원
 
-| <img src="https://github.com/Gony0510.png" width="100"> | <!-- 추가 팀원 프로필 이미지 --> |
+| <img src="https://github.com/Gony0510.png" width="100"> | <img src="https://github.com/danny4737.png" width="100"> |
 | :--: | :--: |
-| [고근](https://github.com/Gony0510) | 팀원 정보 확인 필요 |
-| 센서 연동·AI·앱·대시보드 화면 개발 | 담당 역할 확인 필요 |
+| [고근](https://github.com/Gony0510) | [동환](https://github.com/danny4737) |
+| 센서 연동·AI·앱·대시보드 화면 개발 | 센서 연동·하드웨어·문서 작성 |
 
 <br>
 
