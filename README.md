@@ -47,11 +47,11 @@
 ## ▶️ 실행 방법
 
 ```bash
-# LifeSignal 프로젝트 소스가 WWW 저장소에 반영된 후 실행합니다.
+# LifeSignal 소스를 내려받아 실행합니다.
 
 # 1. 저장소 받기
-git clone https://github.com/WayMakerSchool/WWW.git
-cd WWW
+git clone https://github.com/WayMakerSchool/2026-LifeSignal-WWW.git
+cd 2026-LifeSignal-WWW
 
 # 2. Python 실행 환경 준비
 python3 -m venv .venv
@@ -73,24 +73,27 @@ python3 serial_bridge.py --protocol binary
 
 ## 📁 폴더 구조
 
-<!-- 현재 LifeSignal 개발 소스의 주요 폴더 구조입니다. -->
+<!-- 정리된 LifeSignal 개발 소스의 주요 폴더 구조입니다. -->
 
 ```text
 .
 ├── AI/                            # 데이터 수집·전처리·학습·추론
+│   └── artifacts/
+│       └── vpr100-svm.joblib       # 서버 실행용 최종 SVM 모델
 ├── LifeSignal_Arduino_BLE/         # C4001·ESP32 펌웨어
-├── LifeSignal_Arduino_BLE_LivingB/ # 거실B 센서용 펌웨어
+├── LifeSignal_Arduino_BLE_LivingB/  # 거실B 센서용 펌웨어
 ├── LifeSignal_iOS/                 # iPhone BLE 설정 앱
-├── ForMov/                        # 영상 촬영용 실험 환경
-├── assets/                        # 시연 이미지
 ├── deploy/                        # Raspberry Pi 서비스 설정
+├── tests/                         # 서버·센서·AI 검증 코드
 ├── LifeSignal.html                # 웹 관제 대시보드
-├── BoothBreathingDemo.html        # 부스 시연용 호흡 가이드
+├── DFRobot_C4001.h                # 구조체 정렬을 수정한 센서 헤더
 ├── server.py                      # 중앙 관제 서버
 ├── serial_bridge.py               # V-PR100 시리얼 데이터 전달
 ├── camera_server.py               # Raspberry Pi 카메라 서버
 ├── requirements-pi.txt            # 운영용 Python 패키지
 ├── requirements-ai.txt            # AI 학습용 Python 패키지
+├── SERIAL_GUIDE.md                # 시리얼·AI 운영 가이드
+├── .gitignore                     # 로컬 데이터·환경·생성 파일 제외
 └── README.md
 ```
 
