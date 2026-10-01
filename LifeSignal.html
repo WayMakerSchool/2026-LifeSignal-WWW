@@ -692,6 +692,7 @@
         const POSITION_RENDER_INTERVAL_MS = 500;
         const POSITION_SMOOTHING_ALPHA = 0.35;
         const AUTO_RECONNECT_DELAY_MS = 2000;
+        const IS_STATIC_HOST = window.location.hostname.toLowerCase().endsWith('.github.io');
         // mDNS keeps the dashboard usable when the Pi receives a new DHCP IP.
         const DEFAULT_SERVER_ADDRESS = 'raspberrypi.local:8881';
         const DEFAULT_CAMERA_PROXY_URL = `http://${DEFAULT_SERVER_ADDRESS}/camera/stream.mjpg`;
@@ -717,6 +718,7 @@
         function cameraEndpoint() {
             const configuredBaseUrl = cameraBaseUrl();
             if (configuredBaseUrl) return `${configuredBaseUrl}/stream.mjpg`;
+            if (IS_STATIC_HOST) return '';
             if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
                 return `${window.location.origin}/camera/stream.mjpg`;
             }
@@ -841,7 +843,7 @@
         }
 
         function connectWebSocket(automatic = false) {
-            const address = ipInput.value.trim() || window.location.host;
+            const address = ipInput.value.trim() || (IS_STATIC_HOST ? '' : window.location.host);
             if (!address) {
                 if (!automatic) alert('중계 서버 IP 주소를 입력해주세요.');
                 return;
@@ -1442,7 +1444,11 @@
             if (selectedRoom !== null) scheduleRoomMarkers(selectedRoom);
         });
 
-        if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+        if (IS_STATIC_HOST) {
+            ipInput.value = '';
+            setConnectionStatus('', '서버 연결 대기');
+            addLog(0, '관제 서버 주소를 입력한 뒤 망 접속을 눌러주세요.');
+        } else if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
             ipInput.value = window.location.host;
             addLog(0, '현재 Raspberry Pi 서버에 자동 연결합니다.');
             connectWebSocket(true);
