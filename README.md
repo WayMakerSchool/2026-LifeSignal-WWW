@@ -39,8 +39,8 @@
 
 | <img src="https://github.com/Gony0510.png" width="100"> | <img src="https://github.com/danny4737.png" width="100"> |
 | :--: | :--: | :--: |
-| [고니](https://github.com/Gony0510) | [데니](https://github.com/danny4737) | [캐서린] |
-| 센서 연동·AI·앱·대시보드 화면 개발 | 센서 연동·하드웨어·문서 작성 | 디자인·문서 작성 |
+| [고니](https://github.com/Gony0510) | [데니](https://github.com/danny4737) |
+| 센서 연동·AI·앱·대시보드 화면 개발 | 센서 연동·하드웨어·문서 작성 |
 
 <br>
 
